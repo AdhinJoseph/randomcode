@@ -90,6 +90,7 @@ if a.lower()=="yes":
         print("LETS BEGIN")
         sq=0
         n2=0
+        sq1=0
         while sq < 6:
             g= find(r,k)
             if g == 1:
@@ -98,6 +99,7 @@ if a.lower()=="yes":
                 break
             if n2 >=3:
                 sq+=1
+                sq1+=1
             if n2>0:
                 print("Your seriously wanna waste those chances ,smh ",'\n')
             if sq == 0:
@@ -115,10 +117,12 @@ if a.lower()=="yes":
             n1=str(input("Enter your letter:"))
             if len(n1)>=2 and n1.isalnum():
                 sq+=0
+                sq1+=0
                 n2+=1
                 print("What does a letter refer to my friend",'\n')
             if n1.isalnum() == False:
                 sq+=0
+                sq1+=0
                 n2+=1
                 print("Do you not understand the meaning of letter?",'\n')
             if n1.isalnum() == True and len(n1)==1:
@@ -129,16 +133,18 @@ if a.lower()=="yes":
                         r.pop(i)
                         r.insert(i,n1)
                         sq+=0
+                        sq1+=0
                     print("Your word is as stands")
                     for i in r:
                         print(i,end=" ")
                     print('\n')
                 if n1 not in k:
                     sq+=1  
+                    sq1+=1
                     n2+=0    
         if sq == 6:
             print("TO NOT CLUTCH IT IS , IMAGINE NOT GETTING IT",u"\U0001F90D",u"\U0001F90D",u"\U0001F90D",u"\U0001F90D",u"\U0001F90D",u"\U0001F90D")
-            print("IF YOU MUST KNOW , YOUR MOVIE WAS:", v)
+            print("IF YOU MUST KNOW , YOUR MOVIE WAS:", sq1)
     
     elif i.lower()=="games":
         print (w)
